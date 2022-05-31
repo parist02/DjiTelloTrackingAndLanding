@@ -236,7 +236,7 @@ def main():
 						xmax = int((boxes[0][0][3]*imageWidth))
 						printBoxAttributes(xmin,xmax,ymin,ymax)
 						boxWidth=xmax-xmin
-						boxHeight=ymax-ymax
+						boxHeight=ymax-ymin
 						distance= calculateDistance(boxWidth) #distance from the object
 						if (time.time()-velocityTimer>1 or velocityTimer==-1):
 							platformVelocity = calculateVelocityOfPlatform(distance,lastKnownDistance,velocityTimer)
